@@ -1,0 +1,23 @@
+version - 2.0.0
+
+
+dashboard vtasl
+
+
+htaccess 
+	-error documents
+	-config file deny from all
+new htaccess to controller, modals, views folder
+In Boostrap model object remove
+pass modal name to controller and model object create here
+controller files _controller added
+config file 
+	-AUTH_PREFIX
+	-THEME_PREFIX
+	-MAX_TRY
+	-URL_Admin
+	-UI_THEME
+add User Controller (check auth)
+User Model
+UI_THEME folder to public, views
+error controller

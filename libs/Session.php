@@ -24,4 +24,12 @@ class Session {
         }
     }
 
+    static function isset_session($key){
+        @session_start();
+        if(isset($_SESSION[$key])){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
 }
