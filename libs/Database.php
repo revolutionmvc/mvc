@@ -49,9 +49,14 @@ class Database extends PDO {
 
         if (isset($data['where'])) {
             $where = " WHERE " . $data['where'];
+        } elseif (isset($data['group_by'])) {
+            $where .= " GROUP BY " . $data['group_by'];
+        } elseif (isset($data['order_by'])) {
+            $where .= " ORDER BY " . $data['order_by'];
         } else {
-            $where = ";";
+            $where = "";
         }
+        $where .= ";";
 
         $query = "SELECT " . $data['column'] . " FROM " . $data['table'] . $where;
 
@@ -114,16 +119,6 @@ class Database extends PDO {
         } else {
             return false;
         }
-    }
-
-    function select_in($data) {
-        $in = str_repeat('?,', count($data['data']) - 1) . '?';
-        $query = "SELECT " . $data['column'] . " FROM " . $data['table'] . " WHERE " . $data['where'] . " IN(" . $in.")";
-
-        $stmt = $this->prepare($query);
-        $stmt->execute($data['data']);
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
     }
 
 }

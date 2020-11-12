@@ -3,8 +3,13 @@
 // root URL
 $host = $_SERVER['HTTP_HOST'];
 define('HOST', $host);
+
 define('URL', 'http://example.com/');
-define('PUBLIC_URL', URL.'public/'); //public folder css js files. NOT ajax include here
+define('URL_Admin', 'http://'.$host.'/dashboard/');
+
+//THEME
+define('UI_THEME', 'theme-a'); //public and views folder change when theme changed
+define('PUBLIC_URL', URL_Admin.'public/'.UI_THEME.'/'); //public folder css js files. NOT ajax include here
 
 // Database
 define('DB_TYPE', "mysql");
@@ -13,9 +18,9 @@ define('DB_USER', "db_user");
 define('DB_PASS', "db_pass");
 define('DB_HOST', "host");
 
-//Mail
-define('MHOST', "");
-define('MUSERNAME', '');
-define('MPASSWORD', '');
-define('MTITLE', "");
-define('MPORT', 587);
+define('AUTH_PREFIX', 'abc');
+define('THEME_PREFIX', 'abc');
+define('MAX_TRY', 3);
+
+//SALT
+define('SALT', 'bla_bla');
