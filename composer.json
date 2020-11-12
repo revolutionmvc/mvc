@@ -21,7 +21,7 @@
             "name": "Hirusha"
         }
     ],
-"prefer-stable": true,
+"version": "v2.0.0"
     "autoload": {},
     "require": {}
 }
