@@ -1,0 +1,27 @@
+
+{
+    "name": "revolutionmvc/mvc",
+    "description": "A PHP Framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Asanka"
+        },
+        {
+            "name": "Pasindu"
+        },
+        {
+            "name": "Deshan"
+        },
+        {
+            "name": "Shehan"
+        },
+        {
+            "name": "Hirusha"
+        }
+    ],
+   "minimum-stability": "dev",
+    "autoload": {},
+    "require": {}
+}
